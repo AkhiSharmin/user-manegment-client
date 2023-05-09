@@ -26,7 +26,11 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("inside post response", data);
+        console.log(data);
+        const newUsers = [...user, data];
+        setUser(newUsers);
+
+        from.reset();
       });
   };
 
